@@ -1,6 +1,7 @@
 using System;
+using System.Collections.Generic;
 
-namespace Dealership {
+namespace CarDealership.Models {
 
   class Car
   {
@@ -8,6 +9,7 @@ namespace Dealership {
     private int Price;
     private int Miles;
     private string Note;
+    private static List<cars> _inventory = new List<cars> {};
 
     public Car(string makeModel, int price, int miles, string note)
     {
@@ -37,11 +39,20 @@ namespace Dealership {
       return Note;
     }
 
+    public void SetNote(string newNote)
+    {
+      Note = newNote;
+    }
+
     public void SetPrice(int newPrice)
     {
       Price = newPrice;
     }
 
+    public void Save()
+    {
+      _inventory.Add(this);
+    }
     public bool WorthBuying(int maxPrice, int maxMiles)
     {
       return (Price < maxPrice && Miles < maxMiles);

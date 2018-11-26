@@ -36,7 +36,7 @@ namespace Dealership {
 
       if(CarsMatchingSearch.Count == 0)
       {
-        Console.WriteLine("There is no cars matching you criteria.");
+        Console.WriteLine("There are no cars matching you criteria.");
       }
 
       foreach(Car automobile in CarsMatchingSearch)
