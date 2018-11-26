@@ -21,7 +21,7 @@ namespace CarDealership.Tests
     {
       ViewResult indexView = new HomeController().Index() as ViewResult;
       var result = indexView.ViewData.Model;
-      Assert.IsInstanceOfType(result, typeof(List<>));
+      Assert.IsInstanceOfType(result, typeof(List<Car>));
     }
   }
 }
