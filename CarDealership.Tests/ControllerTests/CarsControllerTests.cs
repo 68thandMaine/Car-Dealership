@@ -13,7 +13,7 @@ namespace CarsControllerTests.Test
     public void Create_ReturnsCorrectActionType_RedirectToActionResult()
     {
       CarsController controller = new CarsController();
-      ActionResult view = controller.Create("Honda", "Crv", 14000, 1300, "Great car, but needs a new coat of paint after driving it through an industrial sized sand blaster accidentally");
+      ActionResult view = controller.Create("Honda", "Crv", 13000, 1300, "Great car, but needs a new coat of paint after driving it through an industrial sized sand blaster accidentally");
       Assert.IsInstanceOfType(view, typeof(RedirectToActionResult));
     }
   }
