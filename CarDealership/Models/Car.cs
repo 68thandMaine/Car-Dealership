@@ -1,75 +1,83 @@
-using System;
+
 using System.Collections.Generic;
 
 namespace CarDealership.Models {
 
-  class Car
+  public class Car
   {
-    private string Make;
-    private string Model;
-    private int Price;
-    private int Miles;
-    private string Note;
-    private static List<cars> _inventory = new List<cars> {};
+    private string _Make;
+    private string _Model;
+    private int _Price;
+    private int _Miles;
+    private string _Note;
+    private static List<Car> _inventory = new List<Car> {};
 
     public Car(string make, string model, int price, int miles, string note)
     {
-      Make = make;
-      Model = model;
-      Price = price;
-      Miles = miles;
-      Note = note;
+      _Make = make;
+      _Model = model;
+      _Price = price;
+      _Miles = miles;
+      _Note = note;
     }
 
     public string GetMake()
     {
-      return Make;
+      return _Make;
     }
     public void SetMake(string newMake)
     {
-      Make = newMake;
+      _Make = newMake;
     }
     public string GetModel()
     {
-      return Model;
+      return _Model;
     }
     public void SetModel(string newModel)
     {
-      Model = newModel;
+      _Model = newModel;
     }
     public int GetPrice()
     {
-      return Price;
+      return _Price;
     }
     public void SetPrice(int newPrice)
     {
-      Price = newPrice;
+      _Price = newPrice;
     }
     public int GetMiles()
     {
-      return Miles;
+      return _Miles;
     }
     public void SetMiles(int newMiles)
     {
-      Miles = newMiles;
+      _Miles = newMiles;
     }
     public string GetNote()
     {
-      return Note;
+      return _Note;
     }
     public void SetNote(string newNote)
     {
-      Note = newNote;
+      _Note = newNote;
     }
 
 
+    public static List<Car> GetAll()
+    {
+      return _inventory;
+    }
     public void Save()
     {
       _inventory.Add(this);
     }
     public bool WorthBuying(int maxPrice, int maxMiles)
     {
-      return (Price < maxPrice && Miles < maxMiles);
+      return (_Price < maxPrice && _Miles < maxMiles);
+    }
+    public static void ClearAll()
+    {
+      _inventory.Clear();
     }
   }
 }

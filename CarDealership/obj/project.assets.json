@@ -9554,11 +9554,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Guest/Desktop/car-dealership/car-dealership.csproj",
+      "projectUniqueName": "/Users/Guest/Desktop/Car-Dealership.Solution/CarDealership/car-dealership.csproj",
       "projectName": "car-dealership",
-      "projectPath": "/Users/Guest/Desktop/car-dealership/car-dealership.csproj",
+      "projectPath": "/Users/Guest/Desktop/Car-Dealership.Solution/CarDealership/car-dealership.csproj",
       "packagesPath": "/Users/Guest/.nuget/packages/",
-      "outputPath": "/Users/Guest/Desktop/car-dealership/obj/",
+      "outputPath": "/Users/Guest/Desktop/Car-Dealership.Solution/CarDealership/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/Guest/.nuget/NuGet/NuGet.Config"
